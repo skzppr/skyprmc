@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url('fonts/Minecraft.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'TheBoldFont';
+    src: url('fonts/The Bold Font.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'CenturyGothic';
+    src: url('fonts/Century Gothic.ttf') format('truetype');
+}
+
+body {
+    font-family: 'CenturyGothic', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('images/bg.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+main {
+    background: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+    color: #fff;
+    max-width: 800px;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Minecraft', Arial, sans-serif;
+}
+
+h2 {
+    font-family: 'TheBoldFont', Arial, sans-serif;
+}
+
+a {
+    color: #e2d6ff;
+    text-decoration: none;
+    position: relative;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px; /* Adjust this value to align the underline correctly */
+    left: 0;
+    background-color: #e2d6ff;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+    background-color: #1e90ff;
+}
+
+a:hover {
+    color: #1e90ff;
+}
+
+button.download-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #1e90ff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+button.download-button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+button.download-button .button-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    filter: invert(100%);
+}
+
+.file-info {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    color: #e2d6ff;
+}
+
+iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    margin: 0 auto;
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#discord-widget iframe {
+    width: 100%;
+    max-width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    display: block;
+    border: none;
+    border-radius: 10px;
+}
