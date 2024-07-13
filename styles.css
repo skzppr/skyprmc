@@ -17,19 +17,38 @@ body {
     font-family: 'CenturyGothic', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: url('images/bg.png') no-repeat center center fixed;
-    background-size: cover;
+    overflow-x: hidden;
+    background-color: #1e1e1e; /* Fallback background color */
 }
 
-main {
+.parallax-container {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 1px;
+    transform-style: preserve-3d;
+}
+
+.parallax-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 250%; /* Increased height to ensure it covers the scrollable area */
+    background: url('images/bg.png') no-repeat center center;
+    background-size: cover;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
     background: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
     color: #fff;
-    max-width: 800px;
-    padding: 2rem;
-    margin: 1rem;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -81,7 +100,7 @@ button.download-button {
     font-size: 16px;
     font-weight: bold;
     color: #fff;
-    background-color: #1e90ff;
+    background-color: #4dff855d;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -91,8 +110,7 @@ button.download-button {
 }
 
 button.download-button:hover {
-    background-color: #555;
-    transform: scale(1.05);
+    background-color: #a9c1ff14;
 }
 
 button.download-button .button-icon {
@@ -127,12 +145,167 @@ li {
     align-items: center;
 }
 
-#discord-widget iframe {
+li .info-icon {
+    margin-left: 10px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+li .info-icon:hover {
+    transform: scale(1.2);
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 300px;
-    height: 400px;
-    margin: 0 auto;
-    display: block;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
     border: none;
-    border-radius: 10px;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.middling-effect {
+    transition-duration: 800ms;
+}
+
+.middling-effect:hover, .middling-effect:focus {
+    transform: scale(.95);
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .content {
+        padding: 1rem;
+    }
+
+    .file-info {
+        font-size: 0.8rem;
+    }
+
+    ul li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul li .info-icon {
+        margin-left: 0;
+        margin-top: 5px;
+        align-self: flex-end;
+    }
+
+    .info-icon:hover {
+        transform: scale(1.1);
+    }
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.overlay-visible {
+    animation: fadeIn 0.5s forwards;
+}
+
+.popup-visible {
+    animation: fadeInUp 0.5s forwards;
+}
+
+.popup-hidden {
+    animation: scaleOut 0.5s forwards, fadeOut 0.5s forwards;
+}
+
+.overlay-hidden {
+    animation: fadeOut 0.5s forwards;
+}
+
+/* Centering the popup */
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
 }
