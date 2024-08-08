@@ -3,68 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>skypr.us</title>
+    <title>skyprMC</title>
+    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <meta name="description" content="SkyprMC Modpack enhances your Minecraft experience with new features and improvements. Explore new worlds, discover unique items, and enjoy a fresh take on the Minecraft gameplay you know and love.">
-    <meta name="keywords" content="Minecraft, Modpack, SkyprMC, Mods, Gaming, Minecraft Mods">
-    <meta name="author" content="skzppy">
+    <link rel="icon" href="pngs/favicon.png" type="image/png">
 </head>
-<body>
-    <div class="parallax-container">
-        <div class="parallax-background"></div>
-        <div class="content">
-            <main>
-                <section id="about">
-                    <h1>S k y p r  M C</h1>
-                    <p>This modpack is designed to enhance your Minecraft experience with new features and improvements. Explore new worlds, discover unique items, and enjoy a fresh take on the Minecraft gameplay you know and love.</p>
-                </section>
-                <section id="prerequisites">
-                    <h2>PREREQUISITES !</h2>
-                    <p>Before installing the modpack, make sure you have the following installed.</p>
-                    <ul>
-                        <li>
-                            <a href="https://www.7-zip.org/download.html" target="_blank" class="hover-effect middling-effect">Install 7ZIP</a>
-                            <img src="images/7zip.png" alt="Info" class="info-icon" data-description="Needed to extract ZIP files.">
-                        </li>
-                        <li>
-                            <a href="https://adoptium.net/temurin/releases/?arch=x64&package=jdk" target="_blank" class="hover-effect middling-effect">Install Java 21</a>
-                            <img src="images/java.png" alt="Info" class="info-icon" data-description="Required to run Minecraft version 1.21.">
-                        </li>
-                        <li>
-                            <a href="https://www.python.org/downloads/" target="_blank" class="hover-effect middling-effect">Install Python (latest)</a>
-                            <img src="images/python.png" alt="Info" class="info-icon" data-description="Fabric Installer requires it.">
-                        </li>
-                        <li>
-                            <a href="https://fabricmc.net/use/installer/" target="_blank" class="hover-effect middling-effect">Install Fabric Installer</a>
-                            <img src="images/fabric.png" alt="Info" class="info-icon" data-description="Used to load the modpack into Minecraft.">
-                        </li>
-                    </ul>
-                    <p>These are required to ensure a successful installation of the modpack.</p>
-                </section>
-                <section id="downloads">
-                    <button onclick="window.location.href='https://github.com/skzppr/skyprmc.github.io/releases/download/0.2/mods.zip'" class="download-button middling-effect">
-                        <img src="images/download_icon.png" alt="Download Icon" class="button-icon"> <strong>Download Modpack</strong>
-                    </button>
-                    <p class="file-info">File Size: 86.8 MB | Total Files: 47</p>
-                    <p><a href="https://github.com/skzppr/skyprmc/releases" target="_blank" class="hover-effect middling-effect">[Other Releases]</a></p>
-                </section>
-                <section id="how-to-download">
-                    <h2>HOW TO DOWNLOAD !</h2>
-                    <p>Watch the video below to learn how to install and get started familiar with installing modpacks.</p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-                </section>
-                <section id="discord-widget">
-                    <iframe src="https://discord.com/widget?id=1181134368668930091&theme=dark" width="300" height="400" allowtransparency="true" frameborder="0"></iframe>
-                </section>
-            </main>
-        </div>
+<body class="is-preload">
+    <div id="sidebar">
+        <h1>skyprMC</h1>
+        <a href="#home" class="active-link">Home</a>
+        <a href="#about">About</a>
+        <a href="#prerequisites">Prerequisites</a>
+        <a href="#download">Download</a>
+        <a href="#tutorial">Tutorial</a>
     </div>
-    <div id="overlay"></div>
-    <div id="popup" class="popup">
-        <span class="close">&times;</span>
-        <p id="popup-text"></p>
+    <div id="content">
+        <section id="home">
+            <h2>Welcome!</h2>
+            <p>Here I will be providing my most up-to-date modpacks for my Minecraft Server. Keeping it all in one place so it's easy for anyone to download the modpack and play with us! Join our <a href="https://discord.gg/sBgVZBQtXY" target="_blank"><img src="pngs/discord.png" alt="Discord" class="discord-icon"></a> to keep up-to-date on anything new and have access to play on our SMP!</p>
+        </section>
+        <section id="about">
+            <h2>About</h2>
+            <p>This website provides the latest modpacks for the skyprMC Minecraft Server. Our goal is to create an easy-to-access platform where users can download the required modpacks and get all the necessary information to join and play on our server.</p>
+        </section>
+        <section id="prerequisites">
+            <h2>Prerequisites</h2>
+            <ul>
+                <li><a href="https://www.7-zip.org/download.html" target="_blank">Install 7zip</a></li>
+                <li><a href="https://www.java.com/en/download/" target="_blank">Install Java 21</a></li>
+                <li><a href="https://www.python.org/downloads/" target="_blank">Python (latest)</a></li>
+                <li><a href="https://fabricmc.net/use/installer/" target="_blank">Fabric Installer</a></li>
+            </ul>
+        </section>
+        <section id="download">
+            <a href="https://github.com/skzppr/skyprmc.github.io/releases/download/0.2/mods.zip" target="_blank"><button>Download Modpack</button></a>
+            <div class="download-info">
+                File Size: 86.8 MB | Total Files: 47
+            </div>
+        </section>
+        <section id="tutorial">
+            <h2>Tutorial</h2>
+            <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/4wOkmjRfOGE?rel=0&autoplay=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
     </div>
-    <script src="script.js"></script>
+    <img id="theme-toggle" src="pngs/mode_switch.png" alt="Switch Mode">
+    <script src="scripts.js"></script>
 </body>
 </html>
