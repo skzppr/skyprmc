@@ -3,52 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>skyprMC</title>
-    <link rel="stylesheet" href="assets/css/main.css">
+    <title>skyprMC - Minecraft Server & Modpack</title>
+    <meta name="description" content="Join skyprMC Minecraft Server - Download our custom modpack and start playing with us today!">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="pngs/favicon.png" type="image/png">
 </head>
 <body class="is-preload">
-    <div id="sidebar">
-        <h1>skyprMC</h1>
-        <a href="#home" class="active-link">Home</a>
-        <a href="#about">About</a>
-        <a href="#prerequisites">Prerequisites</a>
-        <a href="#download">Download</a>
-        <a href="#tutorial">Tutorial</a>
-    </div>
-    <div id="content">
-        <section id="home">
-            <h2>Welcome!</h2>
-            <p>Here I will be providing my most up-to-date modpacks for my Minecraft Server. Keeping it all in one place so it's easy for anyone to download the modpack and play with us! Join our <a href="https://discord.gg/sBgVZBQtXY" target="_blank"><img src="pngs/discord.png" alt="Discord" class="discord-icon"></a> to keep up-to-date on anything new and have access to play on our SMP!</p>
-        </section>
-        <section id="about">
-            <h2>About</h2>
-            <p>This website provides the latest modpacks for the skyprMC Minecraft Server. Our goal is to create an easy-to-access platform where users can download the required modpacks and get all the necessary information to join and play on our server.</p>
-        </section>
-        <section id="prerequisites">
-            <h2>Prerequisites</h2>
-            <ul>
-                <li><a href="https://www.7-zip.org/download.html" target="_blank">Install 7zip</a></li>
-                <li><a href="https://adoptium.net/temurin/releases/?arch=any&package=jdk" target="_blank">Install Java 21</a></li>
-                <li><a href="https://www.python.org/downloads/" target="_blank">Python (latest)</a></li>
-                <li><a href="https://fabricmc.net/use/installer/" target="_blank">Fabric Installer</a></li>
-            </ul>
-        </section>
-        <section id="download">
-            <a href="https://github.com/skzppr/skyprmc.github.io/releases/download/2024/skyprMC.modpack.zip" target="_blank"><button>Download Modpack</button></a>
-            <div class="download-info">
-                File Size: 335 MB
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h1>skyprMC</h1>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="active-link">Home</a>
+            <a href="#about">About</a>
+            <a href="#prerequisites">Prerequisites</a>
+            <a href="#download">Download</a>
+            <a href="#tutorial">Tutorial</a>
+        </div>
+    </nav>
+
+    <main id="content">
+        <section id="home" class="hero-section">
+            <div class="container">
+                <h2>Welcome to skyprMC!</h2>
+                <p class="hero-text">Join our amazing Minecraft community and experience a unique modded gameplay! Get started with our custom modpack and join the adventure today.</p>
+                <div class="cta-buttons">
+                    <a href="#download" class="primary-button">Download Modpack</a>
+                    <a href="https://discord.gg/sBgVZBQtXY" target="_blank" class="discord-button">
+                        <img src="pngs/discord.png" alt="Discord" class="discord-icon">
+                        Join our Discord
+                    </a>
+                </div>
             </div>
         </section>
-        <section id="tutorial">
-            <h2>Tutorial</h2>
-            <div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/4wOkmjRfOGE?rel=0&autoplay=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <section id="about" class="content-section">
+            <div class="container">
+                <h2>About Our Server</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>Custom Modpack</h3>
+                        <p>Experience Minecraft like never before with our carefully curated collection of mods.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Active Community</h3>
+                        <p>Join a friendly and active community of players who love modded Minecraft.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Regular Updates</h3>
+                        <p>Stay up to date with our latest modpack versions and server improvements.</p>
+                    </div>
+                </div>
             </div>
         </section>
-    </div>
-    <img id="theme-toggle" src="pngs/mode_switch.png" alt="Switch Mode">
+
+        <section id="prerequisites" class="content-section">
+            <div class="container">
+                <h2>Getting Started</h2>
+                <div class="prerequisites-grid">
+                    <div class="prereq-card">
+                        <h3>1. Required Software</h3>
+                        <ul>
+                            <li>
+                                <a href="https://www.7-zip.org/download.html" target="_blank" class="prereq-link">
+                                    <span class="prereq-name">7-Zip</span>
+                                    <span class="prereq-desc">For extracting the modpack</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://adoptium.net/temurin/releases/?arch=any&package=jdk" target="_blank" class="prereq-link">
+                                    <span class="prereq-name">Java 21</span>
+                                    <span class="prereq-desc">Required for Minecraft</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.python.org/downloads/" target="_blank" class="prereq-link">
+                                    <span class="prereq-name">Python (Latest)</span>
+                                    <span class="prereq-desc">For mod management</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://fabricmc.net/use/installer/" target="_blank" class="prereq-link">
+                                    <span class="prereq-name">Fabric Installer</span>
+                                    <span class="prereq-desc">Mod loader for Minecraft</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="content-section">
+            <div class="container">
+                <h2>Download Modpack</h2>
+                <div class="download-card">
+                    <div class="download-info">
+                        <span class="version">Latest Version</span>
+                        <span class="file-size">Size: 335 MB</span>
+                    </div>
+                    <a href="https://github.com/skzppr/skyprmc.github.io/releases/download/2024/skyprMC.modpack.zip" target="_blank" class="download-button">
+                        Download Now
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="tutorial" class="content-section">
+            <div class="container">
+                <h2>Installation Tutorial</h2>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/4wOkmjRfOGE?rel=0&autoplay=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <img src="pngs/mode_switch.png" alt="Switch Mode">
+    </button>
+
     <script src="scripts.js"></script>
 </body>
 </html>
